@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import { React, useEffect } from 'react'
 import {Routes, Route} from "react-router-dom";
 import {Header} from './components/Header/Header'
 import {ProductList} from './components/ProductList/ProductList'
 import {Form} from './components/Form/Form'
-const tg = window.Telegram.WebApp;
-
+import { useTelegram } from './hooks/useTelegram';
+import {React, useCallback, useEffect, useState} from 'react';
+ 
 function App() {
+  const {onToggleButton, tg} = useTelegram();
+
   useEffect(()=>{
     tg.ready()
   }, [])
@@ -18,7 +20,6 @@ function App() {
   return (
     <div className="App">
       <div className='container' >
-        <h1>It's work</h1>
         <Header/>
         <Routes>
           <Route index element = {<ProductList/>}/>

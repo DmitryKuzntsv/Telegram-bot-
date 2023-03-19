@@ -1,6 +1,6 @@
-{
+*{
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -19,3 +19,20 @@ body{
     display: flex;
     flex-flow: column wrap;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+}
+ .select {
+    padding: 10 px;
+    margin-top: 15px;
+ }
