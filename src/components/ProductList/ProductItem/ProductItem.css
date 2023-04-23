@@ -7,7 +7,7 @@
 }
 .img {
     width: 100% ;
-    background: lightgray;
+    background: var(--tg-theme-bg-color);
     height: 100px;
     margin: 0 auto;
    
